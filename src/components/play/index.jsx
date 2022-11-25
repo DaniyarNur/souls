@@ -1,11 +1,9 @@
 import React, {useState} from "react";
 import './style.css'
-import rules from '../../data/rules.json'
 import loveImage from '../../assets/love.png'
 import moneyWorkImage from '../../assets/moneyWork.png'
 import personalityExperienceImage from '../../assets/personalityExperience.png'
 import relationshipImage from '../../assets/relationship.png'
-import sexImage from '../../assets/sex.png'
 import questionSign from '../../assets/question.png';
 import {motion} from "framer-motion";
 
@@ -13,7 +11,6 @@ import {motion} from "framer-motion";
 import love from '../../data/love.json'
 import moneyWork from '../../data/moneyWork.json'
 import personalityExperience from '../../data/personalityExperience.json'
-import sex from '../../data/sex.json'
 import relationship from '../../data/relationship.json'
 import categories from "../../data/category.json";
 
@@ -33,7 +30,7 @@ export const Play = () => {
     const handleRandomImage = () => {
         const chosenCategories = []
 
-        for (let i =0; i < 5; i += 1){
+        for (let i =0; i < 4; i += 1){
             if (categories[i].chosen ){
                 if (categories[i].photo === 'love.png') {
                     chosenCategories.push(loveImage)
@@ -43,9 +40,6 @@ export const Play = () => {
                 }
                 if (categories[i].photo === 'relationship.png') {
                     chosenCategories.push(relationshipImage)
-                }
-                if (categories[i].photo === 'sex.png') {
-                    chosenCategories.push(sexImage)
                 }
                 if (categories[i].photo === 'personalityExperience.png') {
                     chosenCategories.push(personalityExperienceImage)
@@ -80,10 +74,7 @@ export const Play = () => {
             const randomNumber = randomInt(0, 23)
             setQuestion(relationship[randomNumber].question)
         }
-        if (randomImage === sexImage) {
-            const randomNumber = randomInt(0, 23)
-            setQuestion(sex[randomNumber].question)
-        }
+
 
     }
 
@@ -102,9 +93,6 @@ export const Play = () => {
             }
             if (category.name === 'Работа и деньги'){
                 return moneyWorkImage
-            }
-            if (category.name === 'Секс'){
-                return sexImage
             }
         }
 
