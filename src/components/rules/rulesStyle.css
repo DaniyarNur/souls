@@ -1,0 +1,96 @@
+.ruleCard {
+    border: 1px #3095ea solid;
+    border-radius: 10px;
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    color: #2e9ce5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rulesButton {
+    opacity: .4;
+    transition: all 0.4s ease;
+    position: relative;
+    left: 0%;
+}
+
+h3 {
+    margin: 5px;
+}
+
+p {
+    margin: 2px;
+    font-size: 18px;
+    color: #00418c;
+}
+
+p:hover{
+    color: #61dafb;
+    cursor: pointer;
+}
+
+
+
+#rulesOrderList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#categoriesListItem {
+    margin: 0;
+    border: 0;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 900px) {
+    #categoriesListItem {
+        font-size: 17px;
+    }
+    .ruleCard {
+        left: 25%;
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width: 720px) {
+    h3{
+        font-size: 25px;
+    }
+    .ruleCard {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #categoriesListItem {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    h3{
+        font-size: 17px;
+    }
+    .ruleCard {
+        padding: 5px;
+        left: 20%;
+    }
+
+
+
+}
